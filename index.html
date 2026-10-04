@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>University Management System</title>
+
+    Font Awesome
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+
+<!-- =====================================================
+                    HEADER START
+===================================================== -->
+
+<header class="ums-header">
+
+
+    <!-- =================================================
+                        TOP BAR
+    ================================================== -->
+
+    <div class="top-bar">
+
+        <div class="header-container top-container">
+
+            <div class="contact-details">
+
+                <a href="mailto:info@university.ac.in">
+                    <i class="fa-solid fa-envelope"></i>
+                    info@university.ac.in
+                </a>
+
+                <a href="tel:+919876543210">
+                    <i class="fa-solid fa-phone"></i>
+                    +91 98765 43210
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+                    MAIN NAVIGATION
+    ================================================== -->
+
+    <div class="navigation-area">
+
+        <div class="header-container navigation-container">
+
+
+            <!-- ================================
+                        UNIVERSITY LOGO
+            ================================= -->
+
+            <a href="index.html" class="university-logo">
+
+                <div class="logo-image">
+
+                    <img src="../image/logo.jpeg"
+                         alt="University Logo">
+
+                </div>
+
+
+                <div class="university-name">
+
+                    <h1>UNIVERSITY</h1>
+
+                    <span>
+                        MANAGEMENT SYSTEM
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- ================================
+                    MOBILE MENU BUTTON
+            ================================= -->
+
+            <button class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open Menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+
+            <!-- ================================
+                        NAVIGATION
+            ================================= -->
+
+            <nav class="main-navigation"
+                 id="mainNavigation">
+
+
+                <!-- HOME -->
+
+                <a href="#"
+                   class="menu-item active">
+
+                    HOME
+
+                </a>
+
+
+
+                <!-- ABOUT -->
+
+                <div class="menu-dropdown">
+
+                    <a href="#"
+                       class="menu-item dropdown-btn">
+
+                        ABOUT US
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="#">
+                            University Profile
+                        </a>
+
+                        <a href="#">
+                            Vision & Mission
+                        </a>
+
+                        <a href="#">
+                            Administration
+                        </a>
+
+                        <a href="#">
+                            Leadership
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ACADEMICS -->
+
+                <div class="menu-dropdown">
+
+                    <a href="#"
+                       class="menu-item dropdown-btn">
+
+                        ACADEMICS
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="#">
+                            Schools
+                        </a>
+
+                        <a href="#">
+                            Departments
+                        </a>
+
+                        <a href="#">
+                            Courses
+                        </a>
+
+                        <a href="#">
+                            Academic Calendar
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ADMISSIONS -->
+
+                <div class="menu-dropdown">
+
+    <a href="#" class="menu-item dropdown-btn">
+        ADMISSIONS
+        <i class="fa-solid fa-chevron-down"></i>
+    </a>
+
+    <div class="dropdown-menu">
+
+        <a href="admission-process.html">
+            Admission Process
+        </a>
+
+        <a href="register.html">
+            New Registration
+        </a>
+
+        <a href="login.html">
+            Registered User Login
+        </a>
+
+        <a href="courses.html">
+            Courses
+        </a>
+
+        <a href="eligibility.html">
+            Eligibility
+        </a>
+
+        <a href="fee-structure.html">
+            Fee Structure
+        </a>
+
+        <a href="important-dates.html">
+            Important Dates
+        </a>
+
+    </div>
+
+</div>
+
+
+                <!-- STUDENTS -->
+
+                <div class="menu-dropdown">
+
+                    <a href="#"
+                       class="menu-item dropdown-btn">
+
+                        STUDENTS
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="#">
+                            Student Portal
+                        </a>
+
+                        <a href="#">
+                            Attendance
+                        </a>
+
+                        <a href="#">
+                            Examination
+                        </a>
+
+                        <a href="#">
+                            Results
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FACULTY -->
+
+                <a href="#"
+                   class="menu-item">
+
+                    FACULTY
+
+                </a>
+
+
+
+                <!-- FEES -->
+
+                <a href="#"
+                   class="menu-item">
+
+                    FEES & PAYMENT
+
+                </a>
+
+
+
+                <!-- PLACEMENTS -->
+
+                <div class="menu-dropdown">
+
+                    <a href="#"
+                       class="menu-item dropdown-btn">
+
+                        PLACEMENTS
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="#">
+                            Placement Cell
+                        </a>
+
+                        <a href="#">
+                            Companies
+                        </a>
+
+                        <a href="#">
+                            Placement Statistics
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CONTACT -->
+
+                <a href="#"
+                   class="menu-item">
+
+                    CONTACT
+
+                </a>
+
+
+
+                <!-- LOGIN BUTTON -->
+
+                <a href="#"
+                   class="login-button">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    LOGIN
+
+                </a>
+
+
+            </nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+
+<!-- =====================================================
+                    HEADER END
+===================================================== -->
+
+
+
+
+
+
+
+
+<!-- =====================================================
+                    DEMO CONTENT
+===================================================== -->
+
+
+
+<!-- =====================================================
+     HOME HERO SLIDER
+===================================================== -->
+
+<section class="home-hero-slider">
+
+    <div class="hero-slides" id="heroSlides">
+
+        <!-- ================= SLIDE 1 ================= -->
+
+        <div class="hero-slide active">
+
+            <img src=""
+                 alt="University Campus">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <span class="hero-small-title">
+                    WELCOME TO
+                </span>
+
+                <h1>
+                    UNIVERSITY
+                    <strong>MANAGEMENT SYSTEM</strong>
+                </h1>
+
+                <p>
+                    One platform for students, faculty,
+                    admissions and university administration.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="register.html"
+                       class="hero-btn apply-btn">
+                        Apply Now
+                    </a>
+
+                    <a href="login.html"
+                       class="hero-btn login-btn">
+                        Student Login
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+
+
+        <!-- ================= SLIDE 2 ================= -->
+
+        <div class="hero-slide">
+
+            <img src="../image/placement.png"
+                 alt="University Placement">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <span class="hero-small-title">
+                    CAREERS | PLACEMENTS | SUCCESS
+                </span>
+
+                <h1>
+                    YOUR FUTURE
+                    <strong>OUR COMMITMENT</strong>
+                </h1>
+
+                <p>
+                    Connect with career opportunities,
+                    recruiters and build your professional future.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#placements"
+                       class="hero-btn apply-btn">
+                        Explore Placements
+                    </a>
+
+                    <a href="#recruiters"
+                       class="hero-btn login-btn">
+                        Top Recruiters
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= SLIDE 3 ================= -->
+
+        <div class="hero-slide">
+
+            <img src="../image/home-campus.png"
+                 alt="University Admissions">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <span class="hero-small-title">
+                    ADMISSIONS OPEN
+                </span>
+
+                <h1>
+                    START YOUR
+                    <strong>ACADEMIC JOURNEY</strong>
+                </h1>
+
+                <p>
+                    Register online, complete your application
+                    and take the first step toward your future.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="register.html"
+                       class="hero-btn apply-btn">
+                        Apply Now
+                    </a>
+
+                    <a href="admission-process.html"
+                       class="hero-btn login-btn">
+                        Admission Process
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= SLIDER DOTS ================= -->
+
+    <div class="hero-dots">
+
+        <button class="hero-dot active"
+                data-slide="0">
+        </button>
+
+        <button class="hero-dot"
+                data-slide="1">
+        </button>
+
+        <button class="hero-dot"
+                data-slide="2">
+        </button>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+<!-- JavaScript -->
+<script src="../scrpt/script.js"></script>
+
+
+
+
+</body>
+</html>
+
+
