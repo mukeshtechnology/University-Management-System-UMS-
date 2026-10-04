@@ -1266,3 +1266,572 @@ button {
     }
 
 }
+
+
+/* =========================================================
+   FINAL RESPONSIVE + COMMON PAGE FIX
+   Added to keep UMS pages consistent on desktop & mobile
+========================================================= */
+
+/* ---------- GLOBAL WIDTH SAFETY ---------- */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ---------- HEADER / LOGO ---------- */
+.navigation-container {
+    min-width: 0;
+}
+
+.university-logo {
+    min-width: 0;
+    flex-shrink: 1;
+}
+
+.university-name {
+    min-width: 0;
+}
+
+.mobile-menu-btn {
+    flex-shrink: 0;
+}
+
+/* ---------- DESKTOP NAV ---------- */
+@media (min-width: 951px) {
+    .main-navigation {
+        position: relative;
+        flex-wrap: nowrap;
+        min-width: 0;
+    }
+}
+
+/* ---------- TABLET ---------- */
+@media (max-width: 1150px) {
+    .header-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .main-navigation {
+        gap: 12px;
+    }
+
+    .menu-item {
+        font-size: 10.5px;
+    }
+
+    .login-button {
+        padding: 8px 10px;
+    }
+}
+
+/* ---------- MOBILE HEADER ---------- */
+@media (max-width: 950px) {
+
+    .top-bar {
+        height: 40px;
+    }
+
+    .top-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .contact-details {
+        width: 100%;
+        justify-content: center;
+        gap: 14px;
+        flex-wrap: nowrap;
+    }
+
+    .contact-details a {
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    .navigation-area {
+        height: 70px;
+    }
+
+    .navigation-container {
+        position: relative;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .university-logo {
+        padding-right: 0;
+        max-width: calc(100% - 55px);
+    }
+
+    .logo-image {
+        flex: 0 0 auto;
+    }
+
+    .university-name {
+        overflow: hidden;
+    }
+
+    .university-name h1,
+    .university-name span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        flex: 0 0 42px;
+        margin-left: 10px;
+    }
+
+    /* Mobile navigation opens directly below the complete header */
+    .main-navigation {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: calc(100vh - 110px);
+        overflow-x: hidden;
+        overflow-y: auto;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px 15px 18px;
+        background: #29335d;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
+        z-index: 9999;
+    }
+
+    .main-navigation.show {
+        display: flex;
+    }
+
+    .main-navigation::before {
+        display: none;
+    }
+
+    .menu-item {
+        width: 100%;
+        max-width: 100%;
+        height: 46px;
+        min-height: 46px;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        white-space: normal;
+    }
+
+    .menu-dropdown {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .menu-dropdown > .menu-item {
+        width: 100%;
+        height: 46px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        top: auto;
+        left: auto;
+        width: 100%;
+        max-width: 100%;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border-top: 0;
+        background: #202849;
+    }
+
+    .menu-dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    .menu-dropdown.open .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu a {
+        width: 100%;
+        min-height: 42px;
+        padding: 11px 20px 11px 30px;
+        color: #ffffff;
+        box-sizing: border-box;
+    }
+
+    .dropdown-menu a:hover {
+        padding-left: 35px;
+    }
+
+    .login-button {
+        width: 100%;
+        max-width: 180px;
+        height: 44px;
+        min-height: 44px;
+        margin: 15px 0 0;
+        padding: 0 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    /* ---------- HOME SLIDER ---------- */
+    .home-hero-slider {
+        width: 100%;
+        max-width: 100%;
+        height: 500px;
+    }
+
+    .hero-slide,
+    .hero-slide img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-slide img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .hero-content {
+        left: 6%;
+        right: 6%;
+        width: auto;
+        max-width: 650px;
+        padding: 0;
+        box-sizing: border-box;
+    }
+}
+
+/* ---------- PHONE ---------- */
+@media (max-width: 600px) {
+
+    .header-container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .top-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .contact-details {
+        gap: 8px;
+    }
+
+    .contact-details a {
+        font-size: 8.5px;
+        gap: 4px;
+    }
+
+    .contact-details i {
+        font-size: 8.5px;
+    }
+
+    .navigation-area {
+        height: 68px;
+    }
+
+    .navigation-container {
+        height: 68px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .logo-image {
+        width: 46px;
+        height: 46px;
+        margin-right: 7px;
+    }
+
+    .logo-image img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .university-name h1 {
+        font-size: 13px;
+        letter-spacing: 1.8px;
+        line-height: 16px;
+    }
+
+    .university-name span {
+        font-size: 6.5px;
+        letter-spacing: 1.2px;
+        margin-top: 1px;
+    }
+
+    .mobile-menu-btn {
+        width: 40px;
+        height: 40px;
+        flex-basis: 40px;
+        font-size: 22px;
+    }
+
+    .main-navigation {
+        top: 68px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    /* Same mobile hero size on all three home slides */
+    .home-hero-slider {
+        width: 100%;
+        height: 520px;
+    }
+
+    .hero-slide {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .hero-overlay {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-content {
+        left: 18px;
+        right: 18px;
+        top: 50%;
+        width: auto;
+        max-width: none;
+        padding: 0;
+    }
+
+    .hero-small-title {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+        margin-bottom: 9px;
+    }
+
+    .hero-content h1 {
+        font-size: 29px;
+        line-height: 1.12;
+    }
+
+    .hero-content p {
+        max-width: 100%;
+        margin: 16px 0 20px;
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 9px;
+    }
+
+    .hero-btn {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        min-height: 45px;
+        padding: 11px 15px;
+        box-sizing: border-box;
+    }
+
+    .hero-dots {
+        bottom: 16px;
+        gap: 8px;
+    }
+
+    /* Common page content/images: keep pages inside viewport */
+    .page-container,
+    .content-container,
+    .registration-container,
+    .register-container,
+    .form-container,
+    .admission-container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .page-container img,
+    .content-container img,
+    .registration-container img,
+    .register-container img,
+    .form-container img,
+    .admission-container img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Prevent wide form controls from creating horizontal scroll */
+    input,
+    select,
+    textarea,
+    button {
+        max-width: 100%;
+    }
+
+    input,
+    select,
+    textarea {
+        box-sizing: border-box;
+    }
+}
+
+/* ---------- VERY SMALL PHONES ---------- */
+@media (max-width: 380px) {
+
+    .contact-details a {
+        font-size: 7.5px;
+    }
+
+    .university-name h1 {
+        font-size: 11.5px;
+        letter-spacing: 1.3px;
+    }
+
+    .university-name span {
+        font-size: 5.8px;
+        letter-spacing: 0.9px;
+    }
+
+    .logo-image {
+        width: 42px;
+        height: 42px;
+        margin-right: 5px;
+    }
+
+    .logo-image img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero-content {
+        left: 15px;
+        right: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 25px;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+}
+
+/* =========================================================
+   COMMON FULL-WIDTH PAGE IMAGE / BANNER
+   Use class="page-banner" on registration/admission/etc.
+========================================================= */
+
+.page-banner {
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.page-banner img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 600px) {
+    .page-banner {
+        height: 220px;
+    }
+
+    .page-banner img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* =========================================================
+   REGISTRATION / FORM PAGE SAFETY
+========================================================= */
+
+.registration-page,
+.register-page,
+.admission-page,
+.form-page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.registration-page .container,
+.register-page .container,
+.admission-page .container,
+.form-page .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    .registration-page .container,
+    .register-page .container,
+    .admission-page .container,
+    .form-page .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* =========================================================
+   IMPORTANT: FONT AWESOME TEXT GAP
+   A plain "Font Awesome" text node cannot be removed by CSS.
+   Keep this CSS so no accidental spacing is introduced.
+========================================================= */
+
+.ums-header + * {
+    margin-top: 0;
+}
+
