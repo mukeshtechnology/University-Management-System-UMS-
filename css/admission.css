@@ -1,0 +1,376 @@
+/* =====================================================
+   ADMISSION PROCESS PAGE
+===================================================== */
+
+.page-banner {
+    background: linear-gradient(
+        135deg,
+        #0d0b9b,
+        #29335d
+    );
+
+    padding: 65px 20px;
+
+    text-align: center;
+
+    color: #ffffff;
+}
+
+.page-banner-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.page-banner h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.page-banner p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+
+/* =====================================================
+   MAIN SECTION
+===================================================== */
+
+.admission-process-section {
+    padding: 70px 20px;
+    background: #f6f8fc;
+}
+
+.admission-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-heading span {
+    color: #e52f4d;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.section-heading h2 {
+    margin: 8px 0 12px;
+    font-size: 32px;
+    color: #17204a;
+}
+
+.section-heading p {
+    max-width: 700px;
+    margin: auto;
+    color: #666;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   PROCESS
+===================================================== */
+
+.process-wrapper {
+    position: relative;
+}
+
+
+/* Vertical line */
+
+.process-wrapper::before {
+    content: "";
+
+    position: absolute;
+
+    left: 39px;
+
+    top: 40px;
+    bottom: 40px;
+
+    width: 2px;
+
+    background: #d9dce8;
+}
+
+
+/* =====================================================
+   STEP
+===================================================== */
+
+.process-step {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 22px;
+
+    background: #ffffff;
+
+    margin-bottom: 20px;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =====================================================
+   STEP NUMBER
+===================================================== */
+
+.step-number {
+    position: relative;
+
+    min-width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: #0d0b9b;
+
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    z-index: 2;
+}
+
+
+/* =====================================================
+   STEP ICON
+===================================================== */
+
+.step-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #fcecef;
+
+    color: #e52f4d;
+
+    font-size: 19px;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h3 {
+    margin: 0 0 8px;
+
+    font-size: 20px;
+
+    color: #17204a;
+}
+
+.step-content p {
+    margin: 0;
+
+    color: #666;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.step-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 15px;
+
+    padding: 9px 16px;
+
+    background: #0d0b9b;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.step-button:hover {
+    background: #e52f4d;
+}
+
+
+/* =====================================================
+   APPLICATION BOX
+===================================================== */
+
+.application-start-box {
+    margin-top: 55px;
+
+    padding: 30px 35px;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.07);
+
+    border-left: 4px solid #e52f4d;
+}
+
+.application-start-box h2 {
+    margin: 0 0 7px;
+
+    color: #17204a;
+}
+
+.application-start-box p {
+    margin: 0;
+
+    color: #666;
+}
+
+
+/* =====================================================
+   START BUTTON
+===================================================== */
+
+.application-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: #e52f4d;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    padding: 13px 22px;
+
+    border-radius: 6px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+.application-button:hover {
+    background: #0d0b9b;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .page-banner {
+        padding: 45px 20px;
+    }
+
+    .page-banner h1 {
+        font-size: 30px;
+    }
+
+    .admission-process-section {
+        padding: 50px 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .process-wrapper::before {
+        display: none;
+    }
+
+    .process-step {
+        flex-wrap: wrap;
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    .step-content {
+        width: 100%;
+    }
+
+    .application-start-box {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 25px;
+    }
+
+    .application-button {
+        width: 100%;
+
+        justify-content: center;
+    }
+}

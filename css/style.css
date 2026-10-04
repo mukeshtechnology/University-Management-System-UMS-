@@ -1,0 +1,1268 @@
+/* =====================================================
+                    GLOBAL CSS
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #ffffff;
+    color: #222;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+.header-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+
+/* =====================================================
+                    HEADER
+===================================================== */
+
+.ums-header {
+    width: 100%;
+    background: #29335d;
+    color: #ffffff;
+    position: relative;
+    z-index: 1000;
+}
+
+
+
+/* =====================================================
+                    TOP BAR
+===================================================== */
+
+.top-bar {
+    height: 42px;
+
+    border-bottom: 1px solid
+        rgba(255, 255, 255, 0.15);
+}
+
+
+.top-container {
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.contact-details {
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+.contact-details a {
+    color: #ffffff;
+
+    font-size: 13px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    transition: 0.3s;
+}
+
+
+.contact-details a:hover {
+    color: #f4c400;
+}
+
+
+.contact-details i {
+    font-size: 13px;
+}
+
+
+
+/* =====================================================
+                NAVIGATION AREA
+===================================================== */
+
+.navigation-area {
+    height: 68px;
+}
+
+
+.navigation-container {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+/* =====================================================
+                    LOGO
+===================================================== */
+
+.university-logo {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    color: #ffffff;
+
+    position: relative;
+
+    padding-right: 35px;
+}
+
+
+.logo-image {
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 10px;
+}
+
+
+.logo-image img {
+    width: 58px;
+    height: 58px;
+
+    object-fit: contain;
+}
+
+
+
+/* University text */
+
+.university-name {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.university-name h1 {
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    line-height: 20px;
+}
+
+
+.university-name span {
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+
+    color: #dddddd;
+
+    margin-top: 2px;
+}
+
+
+
+/* =====================================================
+                MAIN NAVIGATION
+===================================================== */
+
+.main-navigation {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+
+/* Normal menu */
+
+.menu-item {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: all 0.3s ease;
+}
+
+
+/* =====================================================
+        MOVING RED LINE - NAVIGATION
+===================================================== */
+
+.main-navigation {
+    position: relative;
+}
+
+
+/* Red line */
+
+.main-navigation::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: #e52f4d;
+
+    pointer-events: none;
+
+    transition:
+        left 0.30s ease,
+        width 0.30s ease;
+
+    z-index: 10;
+}
+
+
+
+/* Hover */
+
+.menu-item:hover {
+    color: #f4c400;
+}
+
+
+
+/* Active */
+
+.menu-item.active {
+    color: #f4c400;
+}
+
+
+
+/* =====================================================
+                DROPDOWN ARROW
+===================================================== */
+
+.dropdown-btn {
+    gap: 6px;
+}
+
+
+.dropdown-btn i {
+    font-size: 8px;
+
+    transition: transform 0.3s ease;
+}
+
+
+
+/* =====================================================
+                    DROPDOWN
+===================================================== */
+
+.menu-dropdown {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+
+.dropdown-menu {
+    position: absolute;
+
+    top: 68px;
+    left: 0;
+
+    width: 220px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.20);
+
+    border-top: 3px solid #e52f4d;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition: all 0.25s ease;
+}
+
+
+.menu-dropdown:hover .dropdown-menu {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+.menu-dropdown:hover
+.dropdown-btn i {
+    transform: rotate(180deg);
+}
+
+
+
+/* Dropdown links */
+
+.dropdown-menu a {
+    display: block;
+
+    color: #29335d;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    padding: 13px 17px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    transition: 0.25s;
+}
+
+
+.dropdown-menu a:hover {
+    background: #f3f4f8;
+
+    color: #e52f4d;
+
+    padding-left: 22px;
+}
+
+
+
+/* =====================================================
+                    LOGIN BUTTON
+===================================================== */
+
+.login-button {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 10px 15px;
+
+    background: #e52f4d;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    border-radius: 2px;
+
+    transition: 0.3s;
+}
+
+
+.login-button:hover {
+    background: #ffffff;
+
+    color: #29335d;
+}
+
+
+.login-button i {
+    font-size: 11px;
+}
+
+
+
+/* =====================================================
+                MOBILE BUTTON
+===================================================== */
+
+.mobile-menu-btn {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+
+
+/* =====================================================
+                    HERO
+===================================================== */
+
+.hero-section {
+    min-height: 500px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(41, 51, 93, 0.90),
+            rgba(41, 51, 93, 0.90)
+        ),
+        url("images/university.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.hero-content {
+    max-width: 800px;
+
+    padding: 30px;
+
+    color: #ffffff;
+}
+
+
+.welcome-text {
+    color: #f4c400;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 12px;
+}
+
+
+.hero-content h2 {
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 18px;
+}
+
+
+.hero-content > p:not(.welcome-text) {
+    color: #eeeeee;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+
+/* =====================================================
+                    HERO BUTTONS
+===================================================== */
+
+.hero-buttons {
+    margin-top: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+.primary-btn,
+.secondary-btn {
+    padding: 13px 25px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    border-radius: 2px;
+
+    transition: 0.3s;
+}
+
+
+.primary-btn {
+    background: #e52f4d;
+
+    color: #ffffff;
+}
+
+
+.primary-btn:hover {
+    background: #ffffff;
+
+    color: #29335d;
+}
+
+
+.secondary-btn {
+    border: 1px solid #ffffff;
+
+    color: #ffffff;
+}
+
+
+.secondary-btn:hover {
+    background: #ffffff;
+
+    color: #29335d;
+}
+
+
+
+/* =====================================================
+                TABLET RESPONSIVE
+===================================================== */
+
+@media (max-width: 1150px) {
+
+    .header-container {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+
+    .main-navigation {
+        gap: 15px;
+    }
+
+
+    .menu-item {
+        font-size: 11px;
+    }
+
+
+    .login-button {
+        padding: 8px 11px;
+    }
+
+}
+
+
+
+/* =====================================================
+                MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 950px) {
+
+
+    .top-bar {
+        height: 40px;
+    }
+
+
+    .contact-details {
+        gap: 18px;
+    }
+
+
+    .contact-details a {
+        font-size: 11px;
+    }
+
+
+    .navigation-area {
+        height: 70px;
+    }
+
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+
+    .main-navigation {
+        position: absolute;
+
+        top: 110px;
+
+        left: 0;
+
+        width: 100%;
+
+        height: auto;
+
+        background: #29335d;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 10px 25px 20px;
+
+        box-shadow:
+            0 10px 20px rgba(0, 0, 0, 0.20);
+    }
+
+
+    .main-navigation.show {
+        display: flex;
+    }
+
+
+    .menu-item {
+        width: 100%;
+
+        height: 48px;
+
+        border-bottom:
+            1px solid rgba(255,255,255,0.12);
+    }
+
+
+    .menu-dropdown {
+        width: 100%;
+
+        height: auto;
+
+        display: block;
+    }
+
+
+    .menu-dropdown > .menu-item {
+        height: 48px;
+    }
+
+
+    .dropdown-menu {
+        position: static;
+
+        width: 100%;
+
+        display: none;
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: none;
+
+        box-shadow: none;
+
+        border-top: none;
+
+        background: #202849;
+    }
+
+
+    .menu-dropdown.open
+    .dropdown-menu {
+        display: block;
+    }
+
+
+    .dropdown-menu a {
+        color: #ffffff;
+
+        padding-left: 30px;
+    }
+
+
+    .dropdown-menu a:hover {
+        background: #29335d;
+
+        padding-left: 35px;
+    }
+
+
+    .login-button {
+        width: fit-content;
+
+        margin-top: 15px;
+
+        height: auto;
+    }
+
+}
+
+
+
+/* =====================================================
+                SMALL MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+
+    .header-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
+    .top-container {
+        justify-content: center;
+    }
+
+
+    .contact-details {
+        gap: 12px;
+    }
+
+
+    .contact-details a {
+        font-size: 9px;
+    }
+
+
+    .contact-details i {
+        font-size: 9px;
+    }
+
+
+    .logo-image {
+        width: 48px;
+        height: 48px;
+    }
+
+
+    .logo-image img {
+        width: 45px;
+        height: 45px;
+    }
+
+
+    .university-name h1 {
+        font-size: 14px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .university-name span {
+        font-size: 7px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .hero-content h2 {
+        font-size: 28px;
+    }
+
+
+    .hero-content > p:not(.welcome-text) {
+        font-size: 14px;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .primary-btn,
+    .secondary-btn {
+        width: 180px;
+    }
+
+
+
+
+
+
+      
+
+}
+
+
+
+
+ /* -----------------------------------Scrolling image  */
+
+
+
+ /* =====================================================
+   HOME HERO IMAGE SLIDER
+===================================================== */
+
+.home-hero-slider {
+    position: relative;
+
+    width: 100%;
+
+    height: 560px;
+
+    overflow: hidden;
+
+    background: #0d0b9b;
+}
+
+
+/* =====================================================
+   SLIDES CONTAINER
+===================================================== */
+
+.hero-slides {
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+}
+
+
+/* =====================================================
+   INDIVIDUAL SLIDE
+===================================================== */
+
+.hero-slide {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+
+    transform: translateX(100%);
+
+    transition:
+        transform 0.8s ease-in-out,
+        opacity 0.8s ease-in-out;
+
+    pointer-events: none;
+}
+
+
+/* Current slide */
+
+.hero-slide.active {
+    opacity: 1;
+
+    transform: translateX(0);
+
+    pointer-events: auto;
+
+    z-index: 2;
+}
+
+
+/* Previous slide */
+
+.hero-slide.previous {
+    opacity: 0;
+
+    transform: translateX(-100%);
+
+    z-index: 1;
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.hero-slide img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =====================================================
+   DARK OVERLAY
+===================================================== */
+
+.hero-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 13, 50, 0.92) 0%,
+            rgba(5, 13, 50, 0.70) 35%,
+            rgba(5, 13, 50, 0.20) 75%,
+            rgba(5, 13, 50, 0.10) 100%
+        );
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.hero-content {
+    position: absolute;
+
+    top: 50%;
+
+    left: 8%;
+
+    transform: translateY(-50%);
+
+    max-width: 650px;
+
+    color: #ffffff;
+
+    z-index: 5;
+}
+
+
+/* Small heading */
+
+.hero-small-title {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #ffffff;
+}
+
+
+/* Main heading */
+
+.hero-content h1 {
+    margin: 0;
+
+    font-size: 52px;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    color: #ffffff;
+
+    text-transform: uppercase;
+}
+
+
+/* Yellow/Highlight heading */
+
+.hero-content h1 strong {
+    display: block;
+
+    color: #f4c400;
+
+    font-weight: 800;
+}
+
+
+/* Description */
+
+.hero-content p {
+    max-width: 580px;
+
+    margin: 22px 0 28px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   HERO BUTTONS
+===================================================== */
+
+.hero-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.hero-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 145px;
+
+    padding: 13px 22px;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Apply button */
+
+.apply-btn {
+    background: #f4c400;
+
+    color: #111111;
+
+    border: 2px solid #f4c400;
+}
+
+
+.apply-btn:hover {
+    background: #ffffff;
+
+    border-color: #ffffff;
+}
+
+
+/* Login button */
+
+.login-btn {
+    background: transparent;
+
+    color: #ffffff;
+
+    border: 2px solid #ffffff;
+}
+
+
+.login-btn:hover {
+    background: #ffffff;
+
+    color: #0d0b9b;
+}
+
+
+/* =====================================================
+   SLIDER DOTS
+===================================================== */
+
+.hero-dots {
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 20;
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.hero-dot {
+    width: 11px;
+
+    height: 11px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.hero-dot.active {
+    width: 28px;
+
+    border-radius: 10px;
+
+    background: #f4c400;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .home-hero-slider {
+        height: 500px;
+    }
+
+
+    .hero-content {
+        left: 6%;
+
+        right: 6%;
+
+        max-width: 600px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .home-hero-slider {
+        height: 550px;
+    }
+
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(5, 13, 50, 0.90),
+                rgba(5, 13, 50, 0.65)
+            );
+    }
+
+
+    .hero-content {
+        left: 20px;
+
+        right: 20px;
+
+        top: 50%;
+    }
+
+
+    .hero-small-title {
+        font-size: 13px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+
+    .hero-content p {
+        font-size: 15px;
+
+        line-height: 1.6;
+
+        margin: 18px 0 22px;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 10px;
+    }
+
+
+    .hero-btn {
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+
+}
